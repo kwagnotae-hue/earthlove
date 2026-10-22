@@ -1,0 +1,110 @@
+﻿body {
+  font-size: 13px;
+  background-color: #F0FFEF;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+}
+#isl {
+  float: left;
+}
+#title {
+  vertical-align: top;
+}
+
+#head { 
+  width: 800px; 
+}
+#head ul {
+  list-style-type: none;
+  padding-bottom: 5px;
+}
+#head li {
+  display: inline;
+  padding: 5px;
+}
+#head a, #head A:link, #head a:visited, #head a:active { 
+  color: silver; 
+}
+#head A:hover {
+  color: black;
+}
+
+#leftmenu {
+  float: left;
+}
+#leftmenu ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  width: 90px;
+}
+#leftmenu ul li {
+  list-style-type: none;
+  position: relative;
+  padding: 3px;
+  color: #3399ff;
+}
+#leftmenu .redish {
+  color: #995500;
+}
+#leftmenu li ul {
+  position: absolute;
+  left: 70px;
+  top: 0;
+  display: none;
+}
+#leftmenu li:hover ul { 
+  display: block; 
+}
+#leftmenu li ul li {
+  background-color: #eeeedd;
+  padding: 1px;
+}
+#leftmenu a:link, #leftmenu a:active, #leftmenu a:visited {
+  color: #444444;
+}
+#leftmenu a:hover {
+  color: #ff3333;
+}
+#cnm {
+  font-size: 12px;
+}
+
+#contents, #inframe {
+  float: left;
+  background-color: #ffFFeF;
+  width: 800px;
+}
+
+/* --- SIDEBAR LOGIC --- */
+
+/* Desktop Version */
+#sidebar { 
+  width: 190px;
+  position: fixed;
+  left: 900px;
+  top: 10px;
+  margin: 0 0 0 110px; 
+}
+
+/* Mobile/Smartphone Version */
+@media screen and (max-width: 1024px) {
+  /* Fix the containers first so they don't push the sidebar out */
+  #head, #contents, #inframe {
+    width: 100% !important;
+    float: none !important;
+  }
+  
+  #sidebar {
+    position: relative !important;
+    left: 0 !important;
+    top: 0 !important;
+    margin: 20px auto !important;
+    width: 95% !important;
+    display: block !important;
+    clear: both !important; /* Forces it to start on a new line below content */
+  }
+}
